@@ -19,7 +19,14 @@ $userTable="CREATE TABLE Users(
     Email VARCHAR(255) ,
     Password VARCHAR(255) NOT NULL
 )";
+$sql_conn->query($userTable); //kermel kebon bel phpmyadmin
 
+$quizTable= "CREATE TABLE Quize(
+    Quiza_id INT AUTO_INCREMENT  PRIMARY KEY,
+    duration float Not NULL,
+    quizeName VARCHAR(255) NOT NULL 
+)";
+$sql_conn->query($quizTable);
 ?>
 
 <!DOCTYPE html>
