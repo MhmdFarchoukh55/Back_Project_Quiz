@@ -12,7 +12,21 @@ if($sql_conn ){
     die ("connfailed" );
 }
 
+$userTable="CREATE TABLE Users(
+    User_id INT AUTO_INCREMENT  PRIMARY KEY,
+    Lname VARCHAR(255) NOT NULL,
+    Fname VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) ,
+    Password VARCHAR(255) NOT NULL
+)";
 
+if ($sql_conn->query($userTable) === TRUE) {
+    echo "Table users created successfully ✨";
+} else {
+    echo "Error creating table: " . $sql_conn->error;
+}
+
+$sql_conn->close();
 ?>
 
 <!DOCTYPE html>
