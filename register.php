@@ -8,10 +8,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     if ( empty(trim($Last_name))||empty(trim($First_name))||empty(trim($password))||empty(trim($email))  ){
         echo "error !";
     }else{
+        $hashed_password = password_hash($password, PASSWORD_BCRYPT);
+        //kermel a3mol hash lal pass for a security reason
         $query1 = "INSERT INTO users (Lname, Fname, Password, Email) VALUES (?, ?, ?, ?)";
         $stm=mysqli_prepare($sql_conn,$query1);
         // mysqli_prepare 3m 7adir el data take 2 argm 1-connection 2- query
-        mysqli_stmt_bind_param($stm,"ssss",$Last_name,$First_name,$password,$email);
+        mysqli_stmt_bind_param($stm,"ssss",$Last_name,$First_name,$hashed_password,$email);
         //mysqli_stmt_bind_param bte5od 3 para 1-el data yali 7adarta 2-the type of that varbiable 3-variable
         mysqli_stmt_execute($stm);
         //mysqli_stmt_execute kermel keba bel ddatabase
