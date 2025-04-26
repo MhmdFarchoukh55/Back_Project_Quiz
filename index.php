@@ -20,13 +20,6 @@ $userTable="CREATE TABLE Users(
     Password VARCHAR(255) NOT NULL
 )";
 
-if ($sql_conn->query($userTable) === TRUE) {
-    echo "Table users created successfully ✨";
-} else {
-    echo "Error creating table: " . $sql_conn->error;
-}
-
-$sql_conn->close();
 ?>
 
 <!DOCTYPE html>
