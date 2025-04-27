@@ -1,31 +1,31 @@
 <?php
 include "./connection.php";
 
-$duration = '1h';
-$quizname = 'maths';
+// $duration = '1h';
+// $quizname = 'maths';
 
-$query3 = "INSERT INTO quize (duration,quizeName) VALUES (?,?)";
-$stm = mysqli_prepare($sql_conn, $query3);
-mysqli_stmt_bind_param($stm, 'ss', $duration, $quizname);
-mysqli_stmt_execute($stm);
+// $query3 = "INSERT INTO quize (duration,quizeName) VALUES (?,?)";
+// $stm = mysqli_prepare($sql_conn, $query3);
+// mysqli_stmt_bind_param($stm, 'ss', $duration, $quizname);
+// mysqli_stmt_execute($stm);
 
-$duration2 = '1.5h';
-$quizname2 = 'physique';
+// $duration2 = '1.5h';
+// $quizname2 = 'physique';
 
-$query4 = "INSERT INTO quize (duration,quizeName) VALUES (?,?)";
-$stm2 = mysqli_prepare($sql_conn, $query4);
-mysqli_stmt_bind_param($stm2, 'ss', $duration2, $quizname2);
-mysqli_stmt_execute($stm2);
+// $query4 = "INSERT INTO quize (duration,quizeName) VALUES (?,?)";
+// $stm2 = mysqli_prepare($sql_conn, $query4);
+// mysqli_stmt_bind_param($stm2, 'ss', $duration2, $quizname2);
+// mysqli_stmt_execute($stm2);
 
-$duration3 = '1.5h';
-$quizname3 = 'bio';
+// $duration3 = '1.5h';
+// $quizname3 = 'bio';
 
-$query5 = "INSERT INTO quize (duration,quizeName) VALUES (?,?)";
-$stm3 = mysqli_prepare($sql_conn, $query5);
-mysqli_stmt_bind_param($stm3, 'ss', $duration3, $quizname3);
-mysqli_stmt_execute($stm3);
-mysqli_stmt_close($stm3); 
-mysqli_close($sql_conn);
+// $query5 = "INSERT INTO quize (duration,quizeName) VALUES (?,?)";
+// $stm3 = mysqli_prepare($sql_conn, $query5);
+// mysqli_stmt_bind_param($stm3, 'ss', $duration3, $quizname3);
+// mysqli_stmt_execute($stm3);
+// mysqli_stmt_close($stm3); 
+//mysqli_close($sql_conn);
 
 $SelectQuery="SELECT quizeName FROM quize ";
 

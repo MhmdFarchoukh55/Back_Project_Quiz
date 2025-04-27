@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         
         $user=mysqli_fetch_assoc(mysqli_stmt_get_result($stm2) );
         if($user  && $user['Password']=='admin'){
-            header (header: "Location: question.php");
+            header (header: "Location: homeAdmin.php");
         }
         else if ($user  && $password == $user['Password'])  {
             header (header: "Location: home.php");//kermel rou7 3al home page 
@@ -42,6 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         <input type="submit" value="login">
         <p>don'y have an account ? just do one right know</p>
         <a href="register.php">click here!</a>
+
+        <h3>to see all the quizes and question enter email:admin@exmple.com and pass:admin</h3>
 
     </form>
 </body>
