@@ -29,8 +29,8 @@ $scoreTable="CREATE TABLE Score(
 // $sql_conn->query($scoreTable);
 $questionTable="CREATE TABLE Question(
     question_id INT AUTO_INCREMENT PRIMARY KEY,
-    question_grade FLOAT  NOT NULL 
-
+    question_grade FLOAT  NOT NULL
+     
 )";
 // $sql_conn->query($questionTable);
 $sql_conn->close();
