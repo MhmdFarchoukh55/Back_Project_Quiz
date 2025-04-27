@@ -7,12 +7,14 @@
 </head>
 <body>
     <h1>hello admin</h1>
+<hr>
     <h3>updatequiz</h3>
     <a href="updatequiz.php">click here!</a>
     <h3>deletequiz</h3>
     <a href="deletequiz.php">click here!</a>
-
-    
+    <h3>see all quiz </h3>
+    <a href="quiz.php">click here!</a>
+<hr>
     <h3>update question</h3>
     <a href="updatequiz.php">click here!</a>
     <h3>delete question</h3>
