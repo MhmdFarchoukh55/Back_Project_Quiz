@@ -58,5 +58,7 @@ mysqli_close($sql_conn);
     <input type="text" placeholder="old_name" name="upadequestion_name" required><br><br>
     <input type="submit" value="Update">
     </form>
+    <h3>go back home</h3>
+    <a href="homeAdmin.php">click here!!</a>
 </body>
 </html>

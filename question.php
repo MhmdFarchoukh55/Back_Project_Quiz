@@ -66,5 +66,7 @@ while ($user_question = mysqli_fetch_assoc($result2)) {
         <a href="updatequestion.php">click here!!</a>
 
     </form>
+    <h3>go back home</h3>
+    <a href="homeAdmin.php">click here!!</a>
 </body>
 </html>

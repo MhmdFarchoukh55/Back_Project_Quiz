@@ -51,6 +51,7 @@ while ($user_quiz = mysqli_fetch_assoc($result2)) {
     <title>Document</title>
 </head>
 <body>
-    
+<h3>go back home</h3>
+<a href="homeAdmin.php">click here!!</a>
 </body>
 </html>
