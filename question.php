@@ -25,6 +25,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         mysqli_stmt_execute($stm);
     }
 }
+$SelectQuery="SELECT question_name FROM question ";
+
+$stmt2=mysqli_prepare($sql_conn,$SelectQuery);
+        
+mysqli_stmt_execute($stmt2);
+
+$result2 = mysqli_stmt_get_result($stmt2);
+echo "<h1> question </h1>";
+while ($user_question = mysqli_fetch_assoc($result2)) {
+    echo $user_question['question_name'] . "<br>";
+};
+
+
 
 ?>
 
@@ -40,12 +53,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 <body>
     <h1>Question</h1>
     <form method="POST">
-        <input type="text" placeholder="questionName" name="questionName"required><br>
-        <input type="number" placeholder="grade" name="grade"required><br>
+        <input type="text" placeholder="questionName" name="questionName"><br>
+        <input type="number" placeholder="grade" name="grade"><br>
         <p>choose one of these coures : maths -- physique -- networking</p>
-        <input type="text" placeholder="quizname" name="quizname"required><br>
+        <input type="text" placeholder="quizname" name="quizname"><br>
+
 
         <input type="submit" value="questionName">
+        <p>available quizes</p>
+        <a href="quiz.php">click here!!</a>
+        <p>update question</p>
+        <a href="updatequestion.php">click here!!</a>
 
     </form>
 </body>

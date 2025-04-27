@@ -16,8 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         mysqli_stmt_execute($stm);
         //mysqli_stmt_execute kermel keba bel ddatabase
     }
+    header("Location: login.php");
 }
-header("Location: login.php");
+
 
 ?>
 <!DOCTYPE html>

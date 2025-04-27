@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello admin</h1>
+    <h3>updatequiz</h3>
+    <a href="updatequiz.php">click here!</a>
+    <h3>deletequiz</h3>
+    <a href="deletequiz.php">click here!</a>
+
+    
+    <h3>update question</h3>
+    <a href="updatequiz.php">click here!</a>
+    <h3>delete question</h3>
+    <a href="updatequiz.php">click here!</a>
+
+</body>
+</html>

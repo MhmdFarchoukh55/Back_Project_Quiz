@@ -15,9 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $result=mysqli_stmt_execute($stm2);
         
         $user=mysqli_fetch_assoc(mysqli_stmt_get_result($stm2) );
-        
-        if ($user  && $password == $user['Password'])  {
-            header ("Location: home.php");//kermel rou7 3al home page 
+        if($user  && $user['Password']=='admin'){
+            header (header: "Location: question.php");
+        }
+        else if ($user  && $password == $user['Password'])  {
+            header (header: "Location: home.php");//kermel rou7 3al home page 
         }else{
             echo " ";
         }
@@ -38,6 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         <input type="email" placeholder="email" name="email" required><br>
         <input type="password" placeholder="password" name="password" required><br>
         <input type="submit" value="login">
+        <p>don'y have an account ? just do one right know</p>
+        <a href="register.php">click here!</a>
 
     </form>
 </body>
