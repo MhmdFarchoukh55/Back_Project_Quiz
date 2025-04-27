@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $quizId = $row['Quiza_id'];
 
 
-        $query1 = "INSERT INTO question (question_grade, question_name, quize_id) VALUES (? ,? ,?)";
+        $query1 = "INSERT INTO question (question_grade, question_Name, quize_id) VALUES (? ,? ,?)";
         $stm=mysqli_prepare($sql_conn,$query1);
         
         mysqli_stmt_bind_param($stm,"dsi",$grade,$questionName,$quizId);

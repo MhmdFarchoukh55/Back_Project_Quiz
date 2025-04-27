@@ -16,9 +16,9 @@
     <a href="quiz.php">click here!</a>
 <hr>
     <h3>update question</h3>
-    <a href="updatequiz.php">click here!</a>
+    <a href="updatequestion.php">click here!</a>
     <h3>delete question</h3>
-    <a href="updatequiz.php">click here!</a>
+    <a href="deletequestion.php">click here!</a>
 
 </body>
 </html>

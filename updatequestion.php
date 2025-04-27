@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $UpdateQuery = "UPDATE question SET question_grade = ? WHERE question_grade = ?";
         $stmt3 = mysqli_prepare($sql_conn, $UpdateQuery);
-        mysqli_stmt_bind_param($stmt3, "ii", $u1, $u2);
+        mysqli_stmt_bind_param($stmt3, "ss", $u1, $u2);
 
         mysqli_stmt_execute($stmt3);
 
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $v2 = trim($_POST['upadequestion_name']);
 
 
-        $UpdateQuery = "UPDATE question SET question_name = ? WHERE question_name = ?";
+        $UpdateQuery = "UPDATE question SET question_Name = ? WHERE question_Name = ?";
         $stmt4 = mysqli_prepare($sql_conn, $UpdateQuery);
         mysqli_stmt_bind_param($stmt4, "ss", $v1, $v2);
 
@@ -49,11 +49,13 @@ mysqli_close($sql_conn);
 <body>
     <h1>update question</h1>
     <form method="POST">
-    <input type="text" placeholder="upadequestion_grade" name="wantupadequestion"><br>
-    <input type="text" placeholder="wantupadequestion_grade" name="upadequestion"><br>
-    
-    <input type="text" placeholder="wantupadequestion_name" name="wantupadequestion_name" required><br>
-    <input type="text" placeholder="upadequestion_name" name="upadequestion_name" required><br><br>
+        <h3>question name</h3>
+    <input type="text" placeholder="new_duration" name="wantupadequestion"><br>
+    <input type="text" placeholder="old_duration" name="upadequestion"><br>
+    <h3>question time</h3>
+
+    <input type="text" placeholder="new_name" name="wantupadequestion_name" required><br>
+    <input type="text" placeholder="old_name" name="upadequestion_name" required><br><br>
     <input type="submit" value="Update">
     </form>
 </body>
