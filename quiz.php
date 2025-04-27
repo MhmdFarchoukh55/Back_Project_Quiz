@@ -39,6 +39,7 @@ while ($user_quiz = mysqli_fetch_assoc($result2)) {
     echo $user_quiz['quizeName'] . "<br>";
 }
 
+
 $UpdateQuery="UPDATE quize SET quizeName='Networking' WHERE quizeName='Bio'";
 
 $stmt3=mysqli_prepare($sql_conn,$UpdateQuery);
@@ -51,6 +52,14 @@ if (mysqli_stmt_affected_rows($stmt3) > 0) {
 }
 
 
+// $DeleteQuery="DELETE FROM quize WHERE quizeName='physique' ";
+// $stmt4=mysqli_prepare($sql_conn , $DeleteQuery);
+// mysqli_stmt_execute($stmt4);
+// if (mysqli_stmt_affected_rows($stmt4) > 0) {
+//     echo "Quiz name delete successfully!";
+// } else {
+//     echo ""; 
+// }
 ?>
 
 
