@@ -19,6 +19,7 @@
     <a href="updatequestion.php">click here!</a>
     <h3>delete question</h3>
     <a href="deletequestion.php">click here!</a>
-
+    <h3>see all question and add new one </h3>
+    <a href="question.php">click here!</a>
 </body>
 </html>
